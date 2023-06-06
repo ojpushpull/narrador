@@ -21,7 +21,7 @@ export default function App() {
   async function onSubmit(event) {
     event.preventDefault();
     try {
-      const response = await fetch("/api/generate", {
+      const response = await fetch("https://647f75869dbf120008b1681d--warm-tarsier-13175c.netlify.app/src/api/generate.js", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
