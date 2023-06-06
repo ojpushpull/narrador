@@ -21,10 +21,10 @@ export default function App() {
   async function onSubmit(event) {
     event.preventDefault();
     try {
-      const response = await fetch("https://647f75869dbf120008b1681d--warm-tarsier-13175c.netlify.app/src/api/generate.js", {
+      const response = await fetch("/src/api/generate", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "text/html",
         },
         body: JSON.stringify({ name: nameInput, prodserv: prodservInput, vision: visionInput, mission: missionInput, problem: problemInput, solution: solutionInput,
         future: futureInput, colors: colorInput, villian: villianInput, hero: heroInput, descrip: descripInput }),
