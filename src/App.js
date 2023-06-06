@@ -62,7 +62,7 @@ export default function App() {
       
 
       <main className={styles.main}>
-        <img src="/logo192.png" className={styles.icon} />
+        <img src="/logo192.png" alt="power generating" className={styles.icon} />
         <h3>Create your narrative</h3>
         <form onSubmit={onSubmit}>
           <input
