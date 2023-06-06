@@ -17,17 +17,17 @@ export default function App() {
   const [descripInput, setDescripInput] = useState("");
   const [result, setResult] = useState();
 
-  //submit data to generate function
+  //add catch functions to the fetch request
   async function onSubmit(event) {
     event.preventDefault();
     try {
-      const response = await fetch("/src/api/generate", {
+      const response = await fetch("/api/generate", {
         method: "POST",
         headers: {
-          "Content-Type": "text/html",
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({ name: nameInput, prodserv: prodservInput, vision: visionInput, mission: missionInput, problem: problemInput, solution: solutionInput,
-        future: futureInput, colors: colorInput, villian: villianInput, hero: heroInput, descrip: descripInput }),
+        future: futureInput, colors: colorInput, villian: villianInput, hero: heroInput, descrip: descripInput })
       });
 
       const data = await response.json();
