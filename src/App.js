@@ -27,13 +27,10 @@ export default function App() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ name: nameInput, prodserv: prodservInput, vision: visionInput, mission: missionInput, problem: problemInput, solution: solutionInput,
-        future: futureInput, colors: colorInput, villian: villianInput, hero: heroInput, descrip: descripInput }),
+        future: futureInput, colors: colorInput, villian: villianInput, hero: heroInput, descrip: descripInput })
       });
 
-      const text = await response.text();
-
-
-      const data = JSON.parse(text);
+      const data = await response.json();
       if (response.status !== 200) {
         throw data.error || new Error(`Request failed with status ${response.status}`);
       }
@@ -51,8 +48,9 @@ export default function App() {
       setHeroInput("");
       setDescripInput("");
     } catch(error) {
-      console.error('Failed to parse JSON:', text);
-  alert(error.message);
+      // error handling logic here
+      console.error(error);
+      alert(error.message);
     }
   }
 
