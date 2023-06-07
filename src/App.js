@@ -31,7 +31,7 @@ export default function App() {
       });
 
       const text = await response.text();
-try {
+
 
       const data = JSON.parse(text);
       if (response.status !== 200) {
@@ -54,8 +54,8 @@ try {
       console.error('Failed to parse JSON:', text);
   alert(error.message);
     }
-  
-
+  }
+}
   return (
     <div>
       
@@ -150,4 +150,3 @@ try {
       </main>
     </div>
   );
-}
