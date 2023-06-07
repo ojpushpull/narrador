@@ -30,7 +30,10 @@ export default function App() {
         future: futureInput, colors: colorInput, villian: villianInput, hero: heroInput, descrip: descripInput }),
       });
 
-      const data = await response.json();
+      const text = await response.text();
+try {
+
+      const data = JSON.parse(text);
       if (response.status !== 200) {
         throw data.error || new Error(`Request failed with status ${response.status}`);
       }
@@ -48,11 +51,10 @@ export default function App() {
       setHeroInput("");
       setDescripInput("");
     } catch(error) {
-      // error handling logic here
-      console.error(error);
-      alert(error.message);
+      console.error('Failed to parse JSON:', text);
+  alert(error.message);
     }
-  }
+  
 
   return (
     <div>
