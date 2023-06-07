@@ -55,7 +55,7 @@ export default function App() {
   alert(error.message);
     }
   }
-}
+
   return (
     <div>
       
@@ -150,3 +150,4 @@ export default function App() {
       </main>
     </div>
   );
+}
