@@ -27,7 +27,7 @@ export default function App() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ name: nameInput, prodserv: prodservInput, vision: visionInput, mission: missionInput, problem: problemInput, solution: solutionInput,
-        future: futureInput, colors: colorInput, villian: villianInput, hero: heroInput, descrip: descripInput })
+        future: futureInput, colors: colorInput, villian: villianInput, hero: heroInput, descrip: descripInput }),
       });
 
       const data = await response.json();
