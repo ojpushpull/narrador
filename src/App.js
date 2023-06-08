@@ -21,7 +21,7 @@ export default function App() {
   async function onSubmit(event) {
     event.preventDefault();
     try {
-      const response = await fetch("src/api/generate.js", {
+      const response = await fetch("src/api/generate", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
